@@ -28,3 +28,11 @@ Grading
 Assignments
 ---
 The assignment problems will be posted [here](https://github.com/semorrison/category-theory-2017/blob/master/Assignments.pdf). They are a work in progress at the moment, and there are no due dates specified.
+
+Meeting Times
+---
+* Wednesday 12-1: Presentation and discussion
+* Thursday 11-12: Assignment questions discussion
+* Thursday 1-2: Q&A/Lecture with Scott
+
+
