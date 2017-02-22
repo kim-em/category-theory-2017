@@ -13,6 +13,7 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
 Reports
 ---
 After your presentation, please write a report (at least one page). It should:
+* State who was there.
 * Indicate the material you covered in your presentation.
 * Note any difficulties or confusions that arose, particularly those that were not resolved in discussion with the group.
 * Indicate the topics covered in the discussion after the presentation.
