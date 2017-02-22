@@ -1,0 +1,86 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+\input{preamble.tex}
+
+\begin{document}
+
+\title{Problems for the category theory reading course, 2017}
+\author{Scott Morrison}
+  \address[Scott Morrison]{
+  	Mathematical Sciences Institute,
+  	Australian National University
+  }
+  \email{\href{mailto:scott.morrison@anu.edu.au}{scott.morrison@anu.edu.au}}
+\date{Version of \today}
+
+\maketitle
+
+\section{Universal properties}
+\begin{enumerate}
+\item Prove that two initial objects in a category are isomorphic.
+\item For each of the following categories, decide whether there is an initial, final, and/or zero object, and if so, describe them:
+$\sf{FinSet}$, $\sf{fdVec}$, $\sf{Top}$, $\sf{Top}_*$ (pointed topological spaces), field extensions of a fixed field $F$, $\sf{Graphs}$ (your answer may depend on which class of graphs you consider), $\sf{Semigroups}$, $\sf{Groups}$.
+\item Describe the product of two objects as the terminal object in some category.
+\item Describe the tensor product of two vectors spaces as the initial object in some category.
+\item Describe both the product and coproduct in the following categories: $\sf{FinSet}$, $\sf{Top}$, $\sf{Top}_*$, $\sf{AbGroup}$, $\sf{Group}$, $\sf{Graphs}$.
+\end{enumerate}
+
+\section{Functors}
+\begin{enumerate}
+\item Leinster 1.2.21 (functors preserve isomorphisms)
+\item Leinster 1.2.27, 1.2.28b (full, faithful)
+\end{enumerate}
+
+\section{Natural transformations}
+\begin{enumerate}
+\item In $\sf{fdVec}$, show that the functors $\operatorname{id}$ and $**$ are naturally isomorphic. 
+\item Show the the horizontal composition of two natural transformations is in fact a natural transformation.
+\item Show that a functor $F : \cC \to \cD$ is part of an equivalence of categories if and only if it is \emph{fully faithful} and \emph{essentially surjective}. Clearly state where you are using the axiom of choice, or add hypotheses so it is unnecessary.
+\item Prove carefully that the horizontal composition of two natural transformations is again a natural transformation.
+\end{enumerate}
+
+\section{Equivalences}
+\begin{enumerate}
+\item Choose one of the following pairs of categories, and carefully show that they are equivalent:
+\begin{itemize}
+	\item Compact Hausdorff topological spaces, and commutative $C^*$-algebras.
+	\item Subgroups of $\pi_1(X)$, and covers of $X$. (A condition is needed on $X$ to make this work. What is it?)
+	\item Subgroups of $\operatorname{Gal}(E \subset F)$, and intermediate field extensions. (A condition is needed on $E \subset F$ to make this work. What is it?)
+\end{itemize}
+\end{enumerate}
+
+\section{Adjunctions}
+\begin{enumerate}
+\item Consider the forgetful functor from abelian groups to groups. What is its left adjoint?
+\item Prove that the 'hom-set isomorphism' and 'unit/counit' definitions of an adjunction are equivalent.
+\item Give a condition (as weak as you can manage) on a pair of categories $\cC, \cD$, which ensures that a functor $F : \cC \to \cD$ has a left adjoint.
+\item Consider the functors
+\begin{align*}
+gr : & \operatorname{filVec} \to \operatorname{grVec} \\
+     & ( \cdots \subset V_i \subset V_{i+1} \subset \cdots ) \mapsto \bigoplus_i V_{i+1} / V_i \\
+\intertext{and}
+fil : & \operatorname{filVec} \to \operatorname{grVec} \\
+      & \bigoplus_i V_i \mapsto (\cdots \subset \bigoplus_{j\leq i} V_j \subset \bigoplus_{j\leq i+1} V_j \subset \cdots). 
+\end{align*}
+Describe the left and right adjoints, if they exist.
+\item In the category of finite dimensional vector spaces, show that $- \otimes V$ is biadjoint to $- \otimes V^*$.
+\item* Consider the forgetful functor from compact Haussdorff spaces into Hausdorff spaces. Show that its left adjoint is Stone-\v{C}ech compactification.
+\item Recall the $\cC-\mathsf{Set}$ is the category of functors from $\cC$ to $\mathsf{Set}$. Given a functor $F : \cC \to \cD$, we have the pull-back functor $F^* : \cD-\mathsf{Set} \to \cC-\mathsf{Set}$ given by precomposition by $F$. If $F^*$ has adjoints, we call them the right push-forward $F_*$ and the left pushforward $F_!$ (pronounced usually `$F$-shriek').
+
+(You may like to read \url{https://arxiv.org/abs/1009.1166}.)
+\begin{enumerate}
+	\item \nn{Calculate some examples.}
+	\item Show that the polynomial functors, namely those of the form $F_! G^* H_* : \cE-\mathsf{Set} \to \cB-\mathsf{Set}$ for some diagram $$\cB \xleftarrow{F} \cC \xrightarrow{G} \cD \xleftarrow{H} \cE,$$ are closed under composition. (You may assume that all categories are finitely presented, i.e. the path category of some finite graph modulo finitely many relations. You may like to look at \url{https://ncatlab.org/nlab/show/polynomial+functor}, although as is often the case at the \emph{nLab}, the presentation there is more general than we need.) 
+\end{enumerate}
+\end{enumerate}
+
+\section{Abelian categories}
+
+\section{The Yoneda embedding}
+\begin{enumerate}
+\item Show if $F:\cC\to\cD$ is a fully faithful functor, then $f \in \cC(X \to Y)$ is a monomorphism if and only if $F(f)$ is. (Similarly for epimorphisms)
+\item Use this, and the Yoneda embedding, so show that in a rigid abelian category, the functor $- \otimes X$ is exact. (See Proposition 2.1.8 of Bakalov-Kirillov if you need some help; they don't explain how they are using Yoneda, however!)
+\end{enumerate}
+
+\end{document}
+

@@ -1,0 +1,53 @@
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\definecolor{dark-red}{rgb}{0.7,0.25,0.25}
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.55}
+\definecolor{medium-blue}{rgb}{0,0,0.65}
+
+\usepackage{tikz}
+\usetikzlibrary{cd}
+\usetikzlibrary{knots}
+\usetikzlibrary{calc}
+
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage[final]{microtype}
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+\usepackage{ifthen}
+
+\usepackage[pdftex,plainpages=false,hypertexnames=false,pdfpagelabels,breaklinks]{hyperref}
+\hypersetup{
+   colorlinks, linkcolor={purple},
+   citecolor={medium-blue}, urlcolor={medium-blue}
+}
+\urlstyle{same}
+
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{\small  arXiv:#1}}
+
+\newcommand{\nn}[1]{{\color{red} [[#1]]}}
+
+% tricky way to iterate macros over a list
+\def\semicolon{;}
+\def\applytolist#1{
+    \expandafter\def\csname multi#1\endcsname##1{
+        \def\multiack{##1}\ifx\multiack\semicolon
+            \def\next{\relax}
+        \else
+            \csname #1\endcsname{##1}
+            \def\next{\csname multi#1\endcsname}
+        \fi
+        \next}
+    \csname multi#1\endcsname}
+
+% \def\cA{{\cal A}} for A..Z
+\def\calc#1{\expandafter\def\csname c#1\endcsname{{\mathcal #1}}}
+\applytolist{calc}QWERTYUIOPLKJHGFDSAZXCVBNM;
+% \def\bbA{{\mathbb A}} for A..Z
+\def\bbc#1{\expandafter\def\csname bb#1\endcsname{{\mathbb #1}}}
+\applytolist{bbc}QWERTYUIOPLKJHGFDSAZXCVBNM;
+% \def\bfA{{\mathbf A}} for A..Z
+\def\bfc#1{\expandafter\def\csname bf#1\endcsname{{\mathbf #1}}}
+\applytolist{bfc}QWERTYUIOPLKJHGFDSAZXCVBNM;
