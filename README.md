@@ -31,8 +31,8 @@ The assignment problems will be posted [here](https://github.com/semorrison/cate
 
 Meeting Times
 ---
-Wednesday 12-1: Presentation and discussion
-Thursday 11-12: Assignment questions discussion
-Thursday 1-2: Q&A/Lecture with Scott
+* Wednesday 12-1: Presentation and discussion
+* Thursday 11-12: Assignment questions discussion
+* Thursday 1-2: Q&A/Lecture with Scott
 
 
