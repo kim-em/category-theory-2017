@@ -9,6 +9,7 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
 * Week 1:
     * An Ran, on the definitions of categories, functors and natural transformations.
     * I encourage you to all bring an example of a natural transformation, and to discuss these examples after An Ran's presentation.
+    * I wrote some notes on the problem we discussed, [whether all monoids are equivalent to their opposites](week1/monoids.md).
 * Week 2:
     * By the meetings, please finish reading Chapter 1.
     * Zac, on free, faithful, and essentially surjective functors, as well as initial and terminal objects.
