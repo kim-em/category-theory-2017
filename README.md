@@ -1,6 +1,6 @@
 # category-theory-2017
 
-This is the webpage for the category theory reading course at ANU for 2017.
+This is the webpage for the category theory reading course at ANU for 2017. You might also enjoy watching the [Catster's videos](https://www.youtube.com/user/TheCatsters). Wikipedia often has quite good content on category theory. A classic book (the early parts of which are quite readable) is MacLane's ''Categories for the working mathematician''.
 
 The plan
 ---
@@ -11,7 +11,7 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
     * I encourage you to all bring an example of a natural transformation, and to discuss these examples after An Ran's presentation.
 * Week 2:
     * By the meetings, please finish reading Chapter 1.
-    * Zac, on initial and terminal objects, and on adjunctions.
+    * Zac, on free, faithful, and essentially surjective functors, as well as initial and terminal objects.
 * Week 3:
     * Yahya
 * Week 4:
