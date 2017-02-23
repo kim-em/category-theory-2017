@@ -6,9 +6,16 @@ The plan
 ---
 Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pdf/1612.09375.pdf).
 
-* An Ran will be speaking during Week 1, giving the definitions of categories, functors and natural transformations. I encourage you to all bring an example of a natural transformation, and to discuss these examples after An Ran's presentation.
-* By the Week 2 meetings, please have read Chapter 1.
-* James will be speaking during Week 2; topic TBD!
+* Week 1:
+    * An Ran, on the definitions of categories, functors and natural transformations.
+    * I encourage you to all bring an example of a natural transformation, and to discuss these examples after An Ran's presentation.
+* Week 2:
+    * By the meetings, please finish reading Chapter 1.
+    * Zac, on initial and terminal objects, and on adjunctions.
+* Week 3:
+    * Yahya
+* Week 4:
+    * James
 
 Reports
 ---
