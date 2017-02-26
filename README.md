@@ -7,7 +7,7 @@ The plan
 Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pdf/1612.09375.pdf).
 
 * Week 1:
-    * An Ran, on the definitions of categories, functors and natural transformations.
+    * [An Ran](week1/AnRan-presentation.pdf), on the definitions of categories, functors and natural transformations.
     * I encourage you to all bring an example of a natural transformation, and to discuss these examples after An Ran's presentation.
     * I wrote some notes on the problem we discussed, [whether all monoids are equivalent to their opposites](week1/monoids.md).
 * Week 2:
