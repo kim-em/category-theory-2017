@@ -12,7 +12,7 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
     * I wrote some notes on the problem we discussed, [whether all monoids are equivalent to their opposites](week1/monoids.md).
 * Week 2:
     * By the meetings, please finish reading Chapter 1.
-    * Zac, on free, faithful, and essentially surjective functors, as well as initial and terminal objects.
+    * [Zac](week2/ZacDowton-presentation.pdf), on free, faithful, and essentially surjective functors, as well as initial and terminal objects.
 * Week 3:
     * Yahya
 * Week 4:
