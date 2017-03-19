@@ -14,7 +14,7 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
     * By the meetings, please finish reading Chapter 1.
     * [Zac](week2/ZacDowton-presentation.pdf), on free, faithful, and essentially surjective functors, as well as initial and terminal objects.
 * Week 3:
-    * Yahya
+    * [Yahya](week3/YahyaFidouh-presentation.pdf), on adjunctions.
 * Week 4:
     * James
 
