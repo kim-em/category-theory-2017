@@ -57,6 +57,7 @@ $\sf{FinSet}$, $\sf{fdVec}$, $\sf{Top}$, $\sf{Top}_*$ (pointed topological space
 \item Consider the forgetful functor from abelian groups to groups. What is its left adjoint?
 \item In the category of finite dimensional vector spaces, show that $- \otimes V$ is biadjoint to $- \otimes V^*$.
 \item Prove that the `hom-set isomorphism' and `unit/counit' definitions of an adjunction are equivalent.
+\end{enumerate}
 % \item Consider the functors
 % \begin{align*}
 % gr : & \operatorname{filVec} \to \operatorname{grVec} \\
@@ -68,9 +69,53 @@ $\sf{FinSet}$, $\sf{fdVec}$, $\sf{Top}$, $\sf{Top}_*$ (pointed topological space
 % Describe the left and right adjoints, if they exist.
 
 
-\section{Possible problems for later...}
-\item Give a condition (as weak as you can manage) on a pair of categories $\cC, \cD$, which ensures that a functor $F : \cC \to \cD$ has a left adjoint.
-\item* Consider the forgetful functor from compact Haussdorff spaces into Hausdorff spaces. Show that its left adjoint is Stone-\v{C}ech compactification.
+\section{Assignment 2, due at the end of Week 7, will consist of at least:}
+\subsection{Idempotent completion}
+The `idempotent completion' $\Kar(\cC)$ (also called the `Karoubi envelope') is defined as follows:
+\begin{align*}
+\Obj \Kar(\cC) & = \left\{ (X \in \Obj(\cC), p :  X \to X) \mid| p^2 = p \right\} \\
+\Kar(\cC)((X,p) \to (X',p')) & = \left\{ f \in \cC(X \to X') \mid| fp = f = p'f \right\}.
+\end{align*}
+\begin{enumerate}
+\item Let $\mathsf{primeVec}$ denote the full subcategory of $\mathsf{Vec}$ consisting of vector spaces with prime dimensions. Show carefully that $\Kar(\mathsf{primeVec}) \cong \mathsf{Vec}$.
+\item Construct an equivalence $\iota_\cC : \Kar(\Kar(\cC)) \cong \Kar(\cC)$.
+\item Show that there is a fully faithful functor $\cC \to \Kar(\cC)$ given by $X \mapsto (X, 1_X)$.
+\item Note that given a functor $F : \cC \to \cD$, there is functor $\Kar(F) : \Kar(\cC) \to \Kar(\cD)$ given by
+\begin{align*}
+\Kar(F)(X,p) & = (F(X), F(p)) \\
+\Kar(F)(f : (X,p) \to (X',p')) & = F(f).
+\end{align*}
+(You might say that $\Kar$ is a 2-functor from $\mathsf{CAT}$ to itself --- what does this mean at the level of natural transformations?)
+Given a functor $F : \Kar(C) \to \Kar(D)$, show that it is determined up to natural isomorphism by its restriction $F|_\cC : C \to \Kar(D)$, by showing $F \cong (\iota_\cD \circ \Kar(F|_\cC))$.
+\item (Not on the problem set: there is a forgetful 2-functor $\mathsf{CAT} \to \mathsf{SemiCat}$, the 2-category of `semicategories' (categories without identities) and their functors and natural transformations. The idempotent completion gives a 2-functor $\mathsf{SemiCAT} \to \mathsf{CAT}$. Are they an adjoint pair?)
+\end{enumerate}
+
+\subsection{Limits}
+\begin{enumerate}
+\item
+Recall that given a functor $F : \cJ \to \cC$, the \emph{limit} of $F$, written $\lim_\cJ F$ is a terminal object in the category of cones over $F$. Explicitly, a cone consists of
+\begin{enumerate}
+	\item an object $X \in \Obj\cC$,
+	\item for each $j \in \Obj\cC$, a map $f_j : X \to F(j)$,
+	\item such that for any $g:j \to j'$, $F(g) \circ f_j = f_{j'}$.
+\end{enumerate}
+Another way of saying this is that the category of cones is the comma category $(J \downarrow F)$, where here we interpret $\cJ$ as a functor $\cC \to \Fun(\cJ \to \cC)$ by $c \mapsto (j \mapsto c)$ and we interpret $F$ as a functor $1 \to \Fun(\cJ \to \cC)$ by $1 \mapsto (j \mapsto F(j))$. Explain carefully why these are talking about the same thing!
+\end{enumerate}
+
+
+\subsection{The Yoneda embedding}
+\begin{enumerate}
+\item Prove the Yoneda lemma.
+\item Explain why $\Fun(\cC^\text{op} \to \cD) = \Fun(\cC \to \cD^\text{op})$. Prove that $\Set^\text{op} \ncong \Set$, but that $\fdVec^\text{op} \cong \fdVec$.
+\end{enumerate}
+
+\newpage
+\section{Possible problems for later:}
+
+\subsection{More on adjoints}
+\begin{enumerate}
+% \item Give a condition (as weak as you can manage) on a pair of categories $\cC, \cD$, which ensures that a functor $F : \cC \to \cD$ has a left adjoint.
+% \item* Consider the forgetful functor from compact Hausdorff spaces into Hausdorff spaces. Show that its left adjoint is Stone-\v{C}ech compactification.
 \item Recall the $\cC-\mathsf{Set}$ is the category of functors from $\cC$ to $\mathsf{Set}$. Given a functor $F : \cC \to \cD$, we have the pull-back functor $F^* : \cD-\mathsf{Set} \to \cC-\mathsf{Set}$ given by precomposition by $F$. If $F^*$ has adjoints, we call them the right push-forward $F_*$ and the left pushforward $F_!$ (pronounced usually `$F$-shriek').
 
 (You may like to read \url{https://arxiv.org/abs/1009.1166}.)
@@ -78,14 +123,42 @@ $\sf{FinSet}$, $\sf{fdVec}$, $\sf{Top}$, $\sf{Top}_*$ (pointed topological space
 	\item \nn{Calculate some examples.}
 	\item Show that the polynomial functors, namely those of the form $F_! G^* H_* : \cE-\mathsf{Set} \to \cB-\mathsf{Set}$ for some diagram $$\cB \xleftarrow{F} \cC \xrightarrow{G} \cD \xleftarrow{H} \cE,$$ are closed under composition. (You may assume that all categories are finitely presented, i.e. the path category of some finite graph modulo finitely many relations. You may like to look at \url{https://ncatlab.org/nlab/show/polynomial+functor}, although as is often the case at the \emph{nLab}, the presentation there is more general than we need.) 
 \end{enumerate}
+
 \end{enumerate}
 
-\section{Abelian categories}
+\subsection{Abelian categories}
 
-\section{The Yoneda embedding}
+\subsection{Monoidal categories}
 \begin{enumerate}
-\item Show if $F:\cC\to\cD$ is a fully faithful functor, then $f \in \cC(X \to Y)$ is a monomorphism if and only if $F(f)$ is. (Similarly for epimorphisms)
+\item Prove that every monoidal category is monoidally equivalent to a strict monoidal category.
+\item Find an example of a monoidal functor which is not naturally isomorphic to any strict monoidal functor.
+\item Let $\cC$ be a monoidal category. We say a `monoid object' in $\cC$ (or, as we gain confidence, just a monoid in $\cC$) is a tuple $(A \in \Obj C, \iota: 1 \to A, m: A \otimes A \to A)$ satisfying some conditions. Look up, or work out, what these conditions should be. You should be able to show that a monoid object in $\mathsf{Vec}$ is what is usually called an associative unital algebra.
+\begin{enumerate}
+\item A `module object' for a monoid object $A \in \cC$ is a tuple $(M, \triangleright: A \otimes M \to M)$ satisfying an appropriate condition (what is it?). A morphism $f$ between module objects $M$ and $M'$ is a morphism between the underlying objects, such that $f \circ \triangleright_M = \triangleright_{M'} \circ (1_A \otimes f)$. Draw the string diagram corresponding to this axiom. Define composition of module morphisms, by imitating the definition for modules over a ring. Show that modules for a fixed monoid object form a category.
+\end{enumerate}
+\item Show that $\Rep G$, for $G$ a finite group, forms a monoidal category.
+\item If $\Rep G \cong \Rep H$, as categories, are $G$ and $H$ isomorphic? What about if $\Rep G \cong \Rep H$ as monoidal categories? (Hint: think about the forgetful functor vector spaces, and its automorphisms.)
+\end{enumerate}
+
+\subsection{Enriched categories}
+\begin{enumerate}
+\item
+\end{enumerate}
+
+\subsection{A problem involving Yoneda, and rigid monoidal categories}
+\begin{enumerate}
+\item Show if $F:\cC\to\cD$ is a fully faithful functor, then $f \in \cC(X \to Y)$ is a monomorphism if and only if $F(f)$ is. (Similarly for epimorphisms.)
 \item Use this, and the Yoneda embedding, so show that in a rigid abelian category, the functor $- \otimes X$ is exact. (See Proposition 2.1.8 of Bakalov-Kirillov if you need some help; they don't explain how they are using Yoneda, however!)
+\end{enumerate}
+
+\subsection{Braided monoidal categories}
+\begin{enumerate}
+\item Explain how any object $X$ in a pivotal braided category gives an oriented link invariant.
+\item Describe how the Temperley-Lieb category has the structure of a pivotal braided category.
+\item Calculate the invariant of the trefoil corresponding to the object $1$ in Temperley-Lieb. (What is this invariant usually called?)
+\item Show that in $\Kar(TL)$, we have $(2,1_2) \cong (2,f^{(2)}) \oplus (0, 1_0)$. (Here $f^{(2)}$ denotes the second Jones-Wenzl idempotent.)
+\item Calculate the invariant of the unknot corresponding to the object $(2,f^{(2)})$ in (the idempotent completion of) Temperley-Lieb.
+\item We say a monoid $(A, m)$ in a braided monoidal category is commutative if $m \circ \beta = m$. Define a monoidal structure on the category of modules for a commutative monoid.
 \end{enumerate}
 
 \end{document}
