@@ -16,7 +16,9 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
 * Week 3:
     * [Yahya](week3/YahyaFidouh-presentation.pdf), on adjunctions.
 * Week 4:
-    * James
+    * [James](week4/JamesBailie-presentation.pdf).
+* Week 5:
+    * Kie Seng.
 
 Reports
 ---
@@ -37,7 +39,7 @@ Grading
 Assignments
 ---
 The assignment problems will be posted [here](https://github.com/semorrison/category-theory-2017/blob/master/Assignments.pdf). 
-The first batch of problems is due at the end of week 4. Problems after that are still a work in progress.
+The first batch of problems is due at the end of week 4, the second batch is due at the end of week 7. Problems after that are still a work in progress.
 
 Meeting Times
 ---
