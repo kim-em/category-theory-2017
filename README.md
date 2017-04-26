@@ -18,7 +18,11 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
 * Week 4:
     * [James](week4/JamesBailie-presentation.pdf).
 * Week 5:
-    * Kie Seng.
+    * [Kie Seng](week5/KieSengNge-presentation.pdf).
+* Week 6:
+    * [Kie Seng](week5/KieSengNge-presentation.pdf).
+* Week 7:
+    * [Xiang Li](week7/XiangLi-presentation.pdf) spoke more about the Yoneda embedding.
 
 Reports
 ---
