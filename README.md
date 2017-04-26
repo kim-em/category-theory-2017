@@ -20,9 +20,16 @@ Please start reading Tom Leinster's [Basic Category Theory](https://arxiv.org/pd
 * Week 5:
     * [Kie Seng](week5/KieSengNge-presentation.pdf).
 * Week 6:
-    * [Kie Seng](week5/KieSengNge-presentation.pdf).
+    * [Joanne Zheng](week6/JoanneZheng-presentation.pdf).
 * Week 7:
     * [Xiang Li](week7/XiangLi-presentation.pdf) spoke more about the Yoneda embedding.
+* Week 8:
+    * Scott gave an impromptu talk on David Spivak's interpretation of databases in category theory, and functorial data migration. See his [slides](http://math.mit.edu/~dspivak/informatics/talks/CTDBIntroductoryTalk) for an introduction, or read the [paper](http://math.mit.edu/~dspivak/informatics/CD-FDM.pdf). This would be a fun topic for a final report!
+* Week 9:
+    * James and An Ran will cover the parts of Chapter 5 that we haven't already seen in the assignments.
+* Week 10:
+    * Zac and Kie Seng will cover 6.1 and (part of?) 6.2 respectively.
+
 
 Reports
 ---
