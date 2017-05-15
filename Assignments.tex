@@ -114,7 +114,9 @@ Another way of saying this is that the category of cones is the comma category $
 \begin{enumerate}
 \item Prove that every monoidal category is monoidally equivalent to a strict monoidal category.
 
-(Hint: given a monoidal category $\cC$, define a new monoidal category $\mathsf{List} \cC$, whose objects are lists of objects in $\cC$. In $\mathsf{List} \cC$, tensor product of objects is concatenation of lists, and the tensor unit is the empty list. There should be a functor $\mathsf{List} \cC$ to $\cC$ defined by sending a list to the tensor product of the elements of that list. Your job is to describe what happens at the level of morphisms, and check that everything works.)
+\begin{quote}
+(Hint: given a monoidal category $\cC$, define a new monoidal category $\mathsf{List} \cC$, whose objects are lists of objects in $\cC$. In $\mathsf{List} \cC$, tensor product of objects is concatenation of lists, and the tensor unit is the empty list. There should be a functor $\mathsf{List} \cC$ to $\cC$ defined by sending a list $[x_1, x_2, \ldots, x_n]$ to $(((1 \otimes x_1) \otimes x_2) \otimes \cdots \otimes x_n$. Your job is to describe what happens at the level of morphisms, and check that everything works.)
+\end{quote}
 
 % \item Find an example of a monoidal functor which is not naturally isomorphic to any strict monoidal functor.
 
@@ -126,7 +128,19 @@ Another way of saying this is that the category of cones is the comma category $
 \item A `module object' for a monoid object $A \in \cC$ is a tuple $(M, \triangleright: A \otimes M \to M)$ satisfying an appropriate condition (what is it?). A morphism $f$ between module objects $M$ and $M'$ is a morphism between the underlying objects, such that $f \circ \triangleright_M = \triangleright_{M'} \circ (1_A \otimes f)$. Draw the string diagram corresponding to this axiom. Define composition of module morphisms, by imitating the definition for modules over a ring. Show that modules for a fixed monoid object form a category.
 \end{enumerate}
 \item Show that $\Rep G$, for $G$ a finite group, forms a monoidal category.
-\item If $\Rep G \cong \Rep H$, as categories, are $G$ and $H$ isomorphic? (Hint: no, give a counterexample --- any pair of non-isomorphic groups with the same number of irreducible representations (equivalently, the same number of conjugacy classes) will do.) What about if $\Rep G \cong \Rep H$ as monoidal categories, and moreover this equivalence is compatible with the forgetful functors to $\Vec$? (Hint: think about the monoidal automorphisms of the forgetful functor.) %What if we drop the condition about compatibility with the forgetful functors? (Hint: google `isocategorical group'; you can answer this with just an appropriate reference to the literature, or do it yourself.)
+\item (For this part, you may assume we are looking at representations over the complex numbers.)
+\begin{itemize}
+\item If $\Rep G \cong \Rep H$, as categories, are $G$ and $H$ isomorphic?
+\begin{quote}
+(Hint: no, give a counterexample --- any pair of non-isomorphic groups with the same number of irreducible representations (equivalently, the same number of conjugacy classes) will do.)
+\end{quote}
+\item
+What about if $\Rep G \cong \Rep H$ as monoidal categories, and moreover this equivalence is compatible with the forgetful functors to $\Vec$?
+\begin{quote}
+(Hint: think about the monoidal automorphisms of the forgetful functor. You should prove that (not necessarily monoidal) automorphisms of the forgetful functor $\Rep G \to \Vec$ is a group isomorphic to $\mathbb C[G]^{\times}$, and then identify the subgroup of monoidal automorphisms is $G$ is itself. To do the first part, show that any such automorphism is determined by its component on the regular representation $\mathbb C[G]$; for this you may like to use that the regular representation is faithful, or (more or less equivalently) that there is a surjective $G$-linear map from the regular representation to any irreducible representation of $G$.)
+\end{quote}
+%\item What if we drop the condition about compatibility with the forgetful functors? (Hint: google `isocategorical group'; you can answer this with just an appropriate reference to the literature, or do it yourself.)
+\end{itemize}
 \end{enumerate}
 
 \newpage
