@@ -147,18 +147,40 @@ What about if $\Rep G \cong \Rep H$ as monoidal categories, and moreover this eq
 \section{Assignment 4, due May 26:}
 \subsection{Abelian categories}
 \begin{enumerate}
-\item Show if $F:\cC\to\cD$ is a fully faithful functor, then $f \in \cC(X \to Y)$ is a monomorphism if and only if $F(f)$ is. (Similarly for epimorphisms.)
-\item Use this, and the Yoneda embedding, to show that in a rigid abelian category, the functor $- \otimes X$ is exact. (See Proposition 2.1.8 of Bakalov-Kirillov, attached, if you need some help; they don't explain how they are using Yoneda, however! You may cite the literature for any lemmas you like.)
+\item Show that in a rigid abelian category, the functor $- \otimes X$ is exact. (Proposition 2.1.8 of Bakalov-Kirillov, attached,
+gives a terse proof of this. I'd like you to carefully explain their steps. You may find the discussion at \url{https://math.stackexchange.com/q/98877/} helpful.)
 \end{enumerate}
 
 \subsection{Braided monoidal categories}
 \begin{enumerate}
-\item Explain how any object $X$ in a pivotal braided category gives an oriented link invariant.
-\item Describe how the Temperley-Lieb category has the structure of a pivotal braided category.
+\item Explain how any object $X$ in a spherical braided category gives an oriented framed link invariant.
+\begin{quote}
+Hints:
+\begin{itemize}
+\item If we define a function on link diagrams, what do we have to check to show that it defines a `framed' link invariant? (Clue: it's Reidemeister moves II and III, and a \href{https://en.wikipedia.org/wiki/Reidemeister_move}{modified} version of the usual Reidemeister move I.)
+\item In a rigid category, we have morphisms $$\operatorname{ev}: X^* \otimes X \to 1 \qquad \qquad \operatorname{coev}: 1 \to X \otimes X^*.$$ In a pivotal category, we further have natural isomorphisms $\tau_X : X \to X^{**}$, and using this we can construct morphisms $X \otimes X^* \to 1$ and $1 \to X^* \otimes X$. Now we can interpret any oriented link diagram as a morphism $1 \to 1$ in our favourite pivotal braided category, by labelling the strings with an object $X$, and interpreting cups and caps by evaluation and coevaluation maps (and their cousins defined with the pivotal structure), and crossings by the braiding maps.
+\item The axioms for a rigid category and for a pivotal category guarantee that this morphism is invariant under changing the link diagram by a planar isotopy.
+\item What about a braided pivotal category guarantees that this morphism is invariant under changing the link diagram by Reidemeister II and III?
+\item Finally, explain how the extra assumption that the category is spherical ensures invariance under the modified Reidemeister I move.
+\end{itemize}
+\end{quote}
+\item Describe how the Temperley-Lieb category has the structure of a spherical braided category.
 \item Calculate the invariant of the trefoil corresponding to the object $1$ in Temperley-Lieb. (What is this invariant usually called?)
-\item Show that in $\Kar(TL)$, we have $(2,1_2) \cong (2,f^{(2)}) \oplus (0, 1_0)$. (Here $f^{(2)}$ denotes the second Jones-Wenzl idempotent.)
+\item Show that in $\Kar(TL)$, we have $(2,1_2) \cong (2,f^{(2)}) \oplus (0, 1_0)$. Here $f^{(2)}$ denotes the second Jones-Wenzl idempotent:
+\newcommand{\cupcap}{\begin{tikzpicture}[baseline=-0.5ex,scale=0.8]
+	\draw (45:.8cm) to [curve through=(90:.3cm)] (135:.8cm);
+	\draw (-45:.8cm) to [curve through=(-90:.3cm)] (-135:.8cm);
+\end{tikzpicture}}
+
+\newcommand{\twostrandid}{\begin{tikzpicture}[baseline=-0.5ex,rotate=90,scale=0.8]
+	\draw (45:.8cm) to [curve through=(90:.3cm)] (135:.8cm);
+	\draw (-45:.8cm) to [curve through=(-90:.3cm)] (-135:.8cm);
+\end{tikzpicture}}
+
+$$f^{(2)} = \twostrandid -\frac{1}{\delta} \cupcap
+.$$
 \item Calculate the invariant of the unknot corresponding to the object $(2,f^{(2)})$ in (the idempotent completion of) Temperley-Lieb.
-\item We say a monoid $(A, m)$ in a braided monoidal category is commutative if $m \circ \beta = m$. Define a monoidal structure on the category of modules for a commutative monoid.
+\item We say a monoid $(A, m)$ in a braided monoidal category is commutative if $m \circ \beta = m$, where $\beta$ denotes the braiding. Define a monoidal structure on the category of modules for a commutative monoid.
 \end{enumerate}
 
 \includepdf[pages=1-last]{BK-p31.pdf}
