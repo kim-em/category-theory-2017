@@ -143,6 +143,33 @@ What about if $\Rep G \cong \Rep H$ as monoidal categories, and moreover this eq
 \end{itemize}
 \end{enumerate}
 
+
+\newpage
+\section{Assignment 4, attempt 2, due May 26:}
+
+\subsection{Braided monoidal categories}
+\begin{enumerate}
+\item Show that Temperley-Lieb is a braided monoidal category, with braiding satisfying
+$$\braidcross =  A \twostrandid + A^{-1} \cupcap,$$
+for some $A$ so that $\delta = -A^2 - A^{-2}$.
+\item
+We can take a link diagram, and interpret it as a morphism $0 \to 0$ in Temperley-Lieb, by interpreting crossings according to the above formula. (Explain carefully what we're meant to do with \scalebox{0.5}{$\invbraidcross$}.)
+The morphism space $0 \to 0$ consists of just scalar multiples of the empty diagram, so this associates a number to a link diagram. Explain why this number is a \emph{framed} link invariant, i.e. that it doesn't change when we modify the link diagram by Reidemeister moves II and III, and a \href{https://en.wikipedia.org/wiki/Reidemeister_move}{modified} version of the usual Reidemeister move I.
+\item Calculate the invariant of the trefoil, according to this recipe. Show that the trefoil is not isotopic to the unknot, by showing this invariant takes different values on the two knots.
+\item What is this invariant usually called?
+\item Show that in $\Kar(TL)$, we have $(2,1_2) \cong (2,f^{(2)}) \oplus (0, 1_0)$. Here $f^{(2)}$ denotes the second Jones-Wenzl idempotent:
+$$f^{(2)} = \twostrandid -\frac{1}{\delta} \cupcap
+.$$
+\item 
+We can make another knot invariant by replacing each string of a knot diagram by two parallel strings, and somewhere on the knot inserting a copy of $f^{(2)}$.
+$$\mathfig{0.2}{cabled-trefoil}$$
+Explain why this doesn't depend on where we insert the $f^{(2)}$. Calculate this invariant for the unknot.
+\item We say a monoid $(A, m)$ in a braided monoidal category is commutative if $m \circ \beta = m$, where $\beta$ denotes the braiding. Define a monoidal structure on the category of modules for a commutative monoid.
+\end{enumerate}
+
+
+\end{document}
+
 \newpage
 \section{Assignment 4, due May 26:}
 \subsection{Abelian categories}
@@ -167,15 +194,7 @@ Hints:
 \item Describe how the Temperley-Lieb category has the structure of a spherical braided category.
 \item Calculate the invariant of the trefoil corresponding to the object $1$ in Temperley-Lieb. (What is this invariant usually called?)
 \item Show that in $\Kar(TL)$, we have $(2,1_2) \cong (2,f^{(2)}) \oplus (0, 1_0)$. Here $f^{(2)}$ denotes the second Jones-Wenzl idempotent:
-\newcommand{\cupcap}{\begin{tikzpicture}[baseline=-0.5ex,scale=0.8]
-	\draw (45:.8cm) to [curve through=(90:.3cm)] (135:.8cm);
-	\draw (-45:.8cm) to [curve through=(-90:.3cm)] (-135:.8cm);
-\end{tikzpicture}}
 
-\newcommand{\twostrandid}{\begin{tikzpicture}[baseline=-0.5ex,rotate=90,scale=0.8]
-	\draw (45:.8cm) to [curve through=(90:.3cm)] (135:.8cm);
-	\draw (-45:.8cm) to [curve through=(-90:.3cm)] (-135:.8cm);
-\end{tikzpicture}}
 
 $$f^{(2)} = \twostrandid -\frac{1}{\delta} \cupcap
 .$$
@@ -185,7 +204,6 @@ $$f^{(2)} = \twostrandid -\frac{1}{\delta} \cupcap
 
 \includepdf[pages=1-last]{BK-p31.pdf}
 
-\end{document}
 
 \newpage
 \section{Odds and ends}

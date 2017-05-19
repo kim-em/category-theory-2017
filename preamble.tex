@@ -31,6 +31,10 @@
 }
 \urlstyle{same}
 
+\newcommand{\mathfig}[2]{{\hspace{-3pt}\begin{array}{c}%
+  \raisebox{-2.5pt}{\includegraphics[width=#1\textwidth]{#2}}%
+\end{array}\hspace{-3pt}}}
+
 \newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{\small  arXiv:#1}}
 
 \newcommand{\nn}[1]{{\color{red} [[#1]]}}
@@ -66,3 +70,21 @@
 \renewcommand{\Vec}{\mathsf{Vec}}
 \newcommand{\fdVec}{\mathsf{fdVec}}
 \newcommand{\Rep}{\mathsf{Rep}}
+
+\newcommand{\braidcross}{\begin{tikzpicture}[baseline=-0.5ex,scale=0.8]
+    \draw (45:.8cm) -- (-135:.8cm);
+    \draw[line width=1mm,white,double=black] (-45:.8cm) -- (135:.8cm);
+\end{tikzpicture}}
+\newcommand{\invbraidcross}{\begin{tikzpicture}[baseline=-0.5ex,scale=0.8]
+    \draw (-45:.8cm) -- (135:.8cm);
+    \draw[line width=1mm,white,double=black] (45:.8cm) -- (-135:.8cm);
+\end{tikzpicture}}
+\newcommand{\cupcap}{\begin{tikzpicture}[baseline=-0.5ex,scale=0.8]
+    \draw (45:.8cm) to [curve through=(90:.3cm)] (135:.8cm);
+    \draw (-45:.8cm) to [curve through=(-90:.3cm)] (-135:.8cm);
+\end{tikzpicture}}
+
+\newcommand{\twostrandid}{\begin{tikzpicture}[baseline=-0.5ex,rotate=90,scale=0.8]
+    \draw (45:.8cm) to [curve through=(90:.3cm)] (135:.8cm);
+    \draw (-45:.8cm) to [curve through=(-90:.3cm)] (-135:.8cm);
+\end{tikzpicture}}
